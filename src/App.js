@@ -35,7 +35,7 @@ function App() {
 
       const fetchWeatherByCity = async (city) => {
         try{
-          const apikey = process.env.API_KEY;
+          const apikey = '590dcedc5cb3c444a593854476b3b68e';
           const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`);
           setCoordinate({lon : response.data.coord.lon , lat : response.data.coord.lat});
           setWeather(response.data);

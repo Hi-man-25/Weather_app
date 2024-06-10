@@ -32,7 +32,7 @@ const WeatherBox = ({ weather, coordinates }) => {
     useEffect(() => {
         const fetchWeather = async () => {
             try {
-                const apiKey = '590dcedc5cb3c444a593854476b3b68e';
+                const apiKey = process.env.API_KEY;
                 const url = coordinates ? 
                     `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}` :
                     `https://api.openweathermap.org/data/2.5/forecast?q=${weather}&appid=${apiKey}`;
